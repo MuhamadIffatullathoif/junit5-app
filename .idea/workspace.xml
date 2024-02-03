@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="13.Lifecycle annotations @BeforeAll and @AfterAll">
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -73,7 +74,7 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testDev">
+  <component name="RunManager" selected="JUnit.AccountTest.testProcessor">
     <configuration name="AccountTest.printSystemProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -85,6 +86,22 @@
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
       <option name="METHOD_NAME" value="printSystemProperties" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.printVariablesEnvironment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="METHOD_NAME" value="printVariablesEnvironment" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testInside64" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testJavaHome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -116,13 +133,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testInside64" />
+      <option name="METHOD_NAME" value="testJavaHome" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testNo64" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testProcessor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -132,23 +149,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testNo64" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTest.testUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iffat.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iffat.models" />
-      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testUsername" />
+      <option name="METHOD_NAME" value="testProcessor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.testProcessor" />
+        <item itemvalue="JUnit.AccountTest.printVariablesEnvironment" />
+        <item itemvalue="JUnit.AccountTest.testJavaHome" />
         <item itemvalue="JUnit.AccountTest.testDev" />
         <item itemvalue="JUnit.AccountTest.printSystemProperties" />
-        <item itemvalue="JUnit.AccountTest.testUsername" />
-        <item itemvalue="JUnit.AccountTest.testNo64" />
-        <item itemvalue="JUnit.AccountTest.testInside64" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +174,8 @@
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
       <workItem from="1706917228385" duration="10413000" />
-      <workItem from="1706963172713" duration="3328000" />
+      <workItem from="1706963172713" duration="3762000" />
+      <workItem from="1707002990591" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -279,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706968549127</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc">
+      <option name="closed" value="true" />
+      <created>1706973763669</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706973763669</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +309,7 @@
     <MESSAGE value="11.Using @DisplayName and @Disabled annotations" />
     <MESSAGE value="12.Lifecycle annotations @BeforeEach and @AfterEach" />
     <MESSAGE value="13.Lifecycle annotations @BeforeAll and @AfterAll" />
-    <option name="LAST_COMMIT_MESSAGE" value="13.Lifecycle annotations @BeforeAll and @AfterAll" />
+    <MESSAGE value="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc" />
   </component>
 </project>
