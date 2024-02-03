@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+import static org.junit.jupiter.api.Assumptions.assumingThat;
 
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class AccountTest {
@@ -233,5 +235,28 @@ class AccountTest {
     @DisabledIfEnvironmentVariable(named = "ENVIRONMENT", matches = "prod")
     void testEnvProdDisabled() {
 
+    }
+
+    @Test
+    @DisplayName("test Account Balance Dev")
+    void testAccountBalanceDev() {
+        boolean inDev = "dev".equals(System.getProperty("ENV"));
+        assumeTrue(inDev);
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
+        assertEquals(1000.12345, account.getBalance().doubleValue());
+        assertFalse(account.getBalance().compareTo(BigDecimal.ZERO) < 0);
+        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+    }
+
+    @Test
+    @DisplayName("test Account Balance Dev 2")
+    void testAccountBalanceDev2() {
+        boolean inDev = "dev".equals(System.getProperty("ENV"));
+        assumingThat(inDev, () -> {
+            account = new Account("Iffat", new BigDecimal("1000.12345"));
+            assertEquals(1000.12345, account.getBalance().doubleValue());
+        });
+        assertFalse(account.getBalance().compareTo(BigDecimal.ZERO) < 0);
+        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
     }
 }

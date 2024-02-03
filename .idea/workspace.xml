@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="15.Conditional tests executions with @enabledIfEnvironmentVariable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -74,8 +73,8 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testProcessor">
-    <configuration name="AccountTest.printSystemProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AccountTest">
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -85,8 +84,9 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="printSystemProperties" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -DENV=dev" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testDev" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testAccountBalanceDev" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -117,13 +117,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testDev" />
+      <option name="METHOD_NAME" value="testAccountBalanceDev" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testJavaHome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testAccountBalanceDev2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -133,7 +133,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testJavaHome" />
+      <option name="METHOD_NAME" value="testAccountBalanceDev2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,13 +155,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AccountTest.testAccountBalanceDev2" />
+      <item itemvalue="JUnit.AccountTest.testAccountBalanceDev" />
+      <item itemvalue="JUnit.AccountTest" />
+      <item itemvalue="JUnit.AccountTest.printVariablesEnvironment" />
+      <item itemvalue="JUnit.AccountTest.testProcessor" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest" />
+        <item itemvalue="JUnit.AccountTest.testAccountBalanceDev2" />
+        <item itemvalue="JUnit.AccountTest.testAccountBalanceDev" />
         <item itemvalue="JUnit.AccountTest.testProcessor" />
         <item itemvalue="JUnit.AccountTest.printVariablesEnvironment" />
-        <item itemvalue="JUnit.AccountTest.testJavaHome" />
-        <item itemvalue="JUnit.AccountTest.testDev" />
-        <item itemvalue="JUnit.AccountTest.printSystemProperties" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +182,7 @@
       <updated>1706917227378</updated>
       <workItem from="1706917228385" duration="10413000" />
       <workItem from="1706963172713" duration="3762000" />
-      <workItem from="1707002990591" duration="616000" />
+      <workItem from="1707002990591" duration="1413000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -289,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706973763669</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="15.Conditional tests executions with @enabledIfEnvironmentVariable">
+      <option name="closed" value="true" />
+      <created>1707003624728</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707003624728</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +325,7 @@
     <MESSAGE value="12.Lifecycle annotations @BeforeEach and @AfterEach" />
     <MESSAGE value="13.Lifecycle annotations @BeforeAll and @AfterAll" />
     <MESSAGE value="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc" />
+    <MESSAGE value="15.Conditional tests executions with @enabledIfEnvironmentVariable" />
+    <option name="LAST_COMMIT_MESSAGE" value="15.Conditional tests executions with @enabledIfEnvironmentVariable" />
   </component>
 </project>
