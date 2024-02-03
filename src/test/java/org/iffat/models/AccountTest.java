@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class AccountTest {
     Account account;
 
@@ -19,6 +20,16 @@ class AccountTest {
     @AfterEach
     void tearDown() {
         System.out.println("After each");
+    }
+
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Before All");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("After All");
     }
 
     @Test
