@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="03. Write test for balance">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="04. Test Driven Development TDD with JUnit">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -60,7 +59,7 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testAccountReference">
+  <component name="RunManager" selected="JUnit.AccountTest">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -126,9 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.testAccountReference" />
         <item itemvalue="JUnit.AccountTest.testAccountBalance" />
-        <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.testAccountName" />
       </list>
     </recent_temporary>
@@ -141,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
-      <workItem from="1706917228385" duration="4286000" />
+      <workItem from="1706917228385" duration="4951000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -167,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706922097118</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="04. Test Driven Development TDD with JUnit">
+      <option name="closed" value="true" />
+      <created>1706922868672</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706922868672</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +184,7 @@
     <MESSAGE value="01. Create and configure project with JUnit 5" />
     <MESSAGE value="02. Writing and running first unit test with assertions" />
     <MESSAGE value="03. Write test for balance" />
-    <option name="LAST_COMMIT_MESSAGE" value="03. Write test for balance" />
+    <MESSAGE value="04. Test Driven Development TDD with JUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="04. Test Driven Development TDD with JUnit" />
   </component>
 </project>
