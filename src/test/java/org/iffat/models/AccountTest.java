@@ -1,5 +1,6 @@
 package org.iffat.models;
 
+import org.iffat.exceptions.InsufficientMoneyException;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -49,5 +50,16 @@ class AccountTest {
         assertNotNull(account.getBalance());
         assertEquals(1100, account.getBalance().intValue());
         assertEquals("1100.12345", account.getBalance().toPlainString());
+    }
+
+    @Test
+    void testAccountInsufficientMoneyException() {
+        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        Exception exception = assertThrows(InsufficientMoneyException.class, () -> {
+            account.debit(new BigDecimal(1500));
+        });
+        String actual = exception.getMessage();
+        String expected = "Insufficient Money";
+        assertEquals(expected, actual);
     }
 }

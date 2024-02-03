@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="04. Test Driven Development TDD with JUnit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" afterDir="false" />
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="05. TDD for debit and credit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iffat/exceptions/InsufficientMoneyException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,7 +59,7 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest">
+  <component name="RunManager" selected="JUnit.AccountTest.testAccountInsufficientMoneyException">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -86,6 +86,22 @@
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
       <option name="METHOD_NAME" value="testAccountBalance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.testAccountInsufficientMoneyException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="METHOD_NAME" value="testAccountInsufficientMoneyException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,6 +141,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.testAccountInsufficientMoneyException" />
         <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.testAccountReference" />
         <item itemvalue="JUnit.AccountTest.testAccountBalance" />
@@ -140,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
-      <workItem from="1706917228385" duration="4951000" />
+      <workItem from="1706917228385" duration="5728000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -174,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706922868672</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="05. TDD for debit and credit">
+      <option name="closed" value="true" />
+      <created>1706923668406</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706923668406</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +210,7 @@
     <MESSAGE value="02. Writing and running first unit test with assertions" />
     <MESSAGE value="03. Write test for balance" />
     <MESSAGE value="04. Test Driven Development TDD with JUnit" />
-    <option name="LAST_COMMIT_MESSAGE" value="04. Test Driven Development TDD with JUnit" />
+    <MESSAGE value="05. TDD for debit and credit" />
+    <option name="LAST_COMMIT_MESSAGE" value="05. TDD for debit and credit" />
   </component>
 </project>
