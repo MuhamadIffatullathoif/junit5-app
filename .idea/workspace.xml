@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="05. TDD for debit and credit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iffat/exceptions/InsufficientMoneyException.java" afterDir="false" />
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="06. Testing and asserting with assertThrows in JUnit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iffat/models/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +61,7 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testAccountInsufficientMoneyException">
+  <component name="RunManager" selected="JUnit.AccountTest.testRelationBankAccount">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -75,22 +77,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testAccountBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iffat.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iffat.models" />
-      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testAccountBalance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AccountTest.testAccountInsufficientMoneyException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -102,22 +88,6 @@
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
       <option name="METHOD_NAME" value="testAccountInsufficientMoneyException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTest.testAccountName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iffat.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iffat.models" />
-      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testAccountName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,13 +109,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccountTest.testAccountTransferMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="METHOD_NAME" value="testAccountTransferMoney" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.testRelationBankAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="METHOD_NAME" value="testRelationBankAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.testRelationBankAccount" />
+        <item itemvalue="JUnit.AccountTest.testAccountTransferMoney" />
         <item itemvalue="JUnit.AccountTest.testAccountInsufficientMoneyException" />
         <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.testAccountReference" />
-        <item itemvalue="JUnit.AccountTest.testAccountBalance" />
-        <item itemvalue="JUnit.AccountTest.testAccountName" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
-      <workItem from="1706917228385" duration="5728000" />
+      <workItem from="1706917228385" duration="7033000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -199,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706923668406</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="06. Testing and asserting with assertThrows in JUnit">
+      <option name="closed" value="true" />
+      <created>1706924621783</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706924621783</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +221,7 @@
     <MESSAGE value="03. Write test for balance" />
     <MESSAGE value="04. Test Driven Development TDD with JUnit" />
     <MESSAGE value="05. TDD for debit and credit" />
-    <option name="LAST_COMMIT_MESSAGE" value="05. TDD for debit and credit" />
+    <MESSAGE value="06. Testing and asserting with assertThrows in JUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="06. Testing and asserting with assertThrows in JUnit" />
   </component>
 </project>

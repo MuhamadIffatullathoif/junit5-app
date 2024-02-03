@@ -62,4 +62,34 @@ class AccountTest {
         String expected = "Insufficient Money";
         assertEquals(expected, actual);
     }
+
+    @Test
+    void testAccountTransferMoney() {
+        Account account1 = new Account("Iffat", new BigDecimal("2500"));
+        Account account2 = new Account("John Doe", new BigDecimal("1500.12345"));
+
+        Bank bank = new Bank();
+        bank.setName("BRI");
+        bank.transfer(account2, account1, new BigDecimal(500));
+
+        assertEquals("1000.12345", account2.getBalance().toPlainString());
+        assertEquals("3000", account1.getBalance().toPlainString());
+    }
+
+    @Test
+    void testRelationBankAccount() {
+        Account account1 = new Account("Iffat", new BigDecimal("2500"));
+        Account account2 = new Account("John Doe", new BigDecimal("1500.12345"));
+
+        Bank bank = new Bank();
+        bank.addAccount(account1);
+        bank.addAccount(account2);
+        bank.setName("BRI");
+        bank.transfer(account2, account1, new BigDecimal(500));
+
+        assertEquals("1000.12345", account2.getBalance().toPlainString());
+        assertEquals("3000", account1.getBalance().toPlainString());
+
+        assertEquals(2, bank.getAccounts().size());
+    }
 }
