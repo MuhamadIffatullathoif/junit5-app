@@ -16,4 +16,12 @@ class AccountTest {
         assertEquals(expected, actual);
         assertTrue(actual.equals("Iffat"));
     }
+
+    @Test
+    void testAccountBalance() {
+        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        assertEquals(1000.12345, account.getBalance().doubleValue());
+        assertFalse(account.getBalance().compareTo(BigDecimal.ZERO) < 0);
+        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+    }
 }

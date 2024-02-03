@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="01. Create and configure project with JUnit 5">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="02. Writing and running first unit test with assertions">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iffat/models/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -59,7 +60,38 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AccountTest.testAccountBalance">
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.testAccountBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="METHOD_NAME" value="testAccountBalance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountTest.testAccountName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -78,6 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.testAccountBalance" />
+        <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.testAccountName" />
       </list>
     </recent_temporary>
@@ -90,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
-      <workItem from="1706917228385" duration="1699000" />
+      <workItem from="1706917228385" duration="3209000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -100,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706917853855</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="02. Writing and running first unit test with assertions">
+      <option name="closed" value="true" />
+      <created>1706919004691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706919004691</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="01. Create and configure project with JUnit 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="01. Create and configure project with JUnit 5" />
+    <MESSAGE value="02. Writing and running first unit test with assertions" />
+    <option name="LAST_COMMIT_MESSAGE" value="02. Writing and running first unit test with assertions" />
   </component>
 </project>
