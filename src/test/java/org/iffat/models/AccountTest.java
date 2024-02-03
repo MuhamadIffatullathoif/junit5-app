@@ -91,5 +91,11 @@ class AccountTest {
         assertEquals("3000", account1.getBalance().toPlainString());
 
         assertEquals(2, bank.getAccounts().size());
+        assertEquals("BRI", account1.getBank().getName());
+        assertEquals("Iffat", bank.getAccounts().stream()
+                .filter(account -> account.getPerson().equals("Iffat"))
+                .findFirst().get().getPerson());
+        assertTrue(bank.getAccounts().stream()
+                .anyMatch(account -> account.getPerson().equals("Iffat")));
     }
 }
