@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="09.Using assertAll Method">
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="10.Adding failure message to assertion method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,7 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testAccountName">
+  <component name="RunManager" selected="JUnit.AccountTest">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -154,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountTest.testAccountName" />
+        <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.testRelationBankAccount" />
+        <item itemvalue="JUnit.AccountTest.testAccountName" />
         <item itemvalue="JUnit.AccountTest.testAccountTransferMoney" />
         <item itemvalue="JUnit.AccountTest.testAccountInsufficientMoneyException" />
-        <item itemvalue="JUnit.AccountTest" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
-      <workItem from="1706917228385" duration="8709000" />
+      <workItem from="1706917228385" duration="10053000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -244,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706926804922</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="10.Adding failure message to assertion method">
+      <option name="closed" value="true" />
+      <created>1706927519446</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706927519446</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +269,7 @@
     <MESSAGE value="07.Adding the bank class and the relationship with the accounts" />
     <MESSAGE value="08.Proving and affirming the relationship between bank and account" />
     <MESSAGE value="09.Using assertAll Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="09.Using assertAll Method" />
+    <MESSAGE value="10.Adding failure message to assertion method" />
+    <option name="LAST_COMMIT_MESSAGE" value="10.Adding failure message to assertion method" />
   </component>
 </project>

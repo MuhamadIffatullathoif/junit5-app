@@ -1,6 +1,8 @@
 package org.iffat.models;
 
 import org.iffat.exceptions.InsufficientMoneyException;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -9,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
     @Test
+    @DisplayName("testing the name of the checking account")
     void testAccountName() {
         Account account = new Account("Iffat", new BigDecimal("1000.12345"));
 //        account.setPerson("Iffat");
@@ -20,6 +23,7 @@ class AccountTest {
     }
 
     @Test
+    @DisplayName("testing the current account balance, which is not null, greater than zero, expected value.")
     void testAccountBalance() {
         Account account = new Account("Iffat", new BigDecimal("1000.12345"));
         assertEquals(1000.12345, account.getBalance().doubleValue());
@@ -28,6 +32,7 @@ class AccountTest {
     }
 
     @Test
+    @DisplayName("testing references that are equal with the equals method.")
     void testAccountReference() {
         Account account = new Account("John doe", new BigDecimal("8000.9996"));
         Account account2 = new Account("John doe", new BigDecimal("8000.9996"));
@@ -78,7 +83,10 @@ class AccountTest {
     }
 
     @Test
+    @Disabled
+    @DisplayName("Testing relationship bank and account with assertAll")
     void testRelationBankAccount() {
+        fail();
         Account account1 = new Account("Iffat", new BigDecimal("2500"));
         Account account2 = new Account("John Doe", new BigDecimal("1500.12345"));
 
