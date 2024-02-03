@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="12.Lifecycle annotations @BeforeEach and @AfterEach">
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="13.Lifecycle annotations @BeforeAll and @AfterAll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -73,8 +73,8 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest">
-    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AccountTest.testDev">
+    <configuration name="AccountTest.printSystemProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -84,28 +84,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTest.testAccountInsufficientMoneyException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit5_app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iffat.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iffat.models" />
-      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testAccountInsufficientMoneyException" />
+      <option name="METHOD_NAME" value="printSystemProperties" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testAccountName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testDev" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -115,13 +100,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testAccountName" />
+      <option name="METHOD_NAME" value="testDev" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testAccountTransferMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testInside64" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -131,13 +116,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testAccountTransferMoney" />
+      <option name="METHOD_NAME" value="testInside64" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testRelationBankAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testNo64" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +132,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testRelationBankAccount" />
+      <option name="METHOD_NAME" value="testNo64" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.testUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit5_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iffat.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iffat.models" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
+      <option name="METHOD_NAME" value="testUsername" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.testRelationBankAccount" />
-        <item itemvalue="JUnit.AccountTest.testAccountName" />
-        <item itemvalue="JUnit.AccountTest.testAccountTransferMoney" />
-        <item itemvalue="JUnit.AccountTest.testAccountInsufficientMoneyException" />
+        <item itemvalue="JUnit.AccountTest.testDev" />
+        <item itemvalue="JUnit.AccountTest.printSystemProperties" />
+        <item itemvalue="JUnit.AccountTest.testUsername" />
+        <item itemvalue="JUnit.AccountTest.testNo64" />
+        <item itemvalue="JUnit.AccountTest.testInside64" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
       <workItem from="1706917228385" duration="10413000" />
-      <workItem from="1706963172713" duration="1239000" />
+      <workItem from="1706963172713" duration="3328000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -270,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706963791814</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="13.Lifecycle annotations @BeforeAll and @AfterAll">
+      <option name="closed" value="true" />
+      <created>1706968549127</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706968549127</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +298,7 @@
     <MESSAGE value="10.Adding failure message to assertion method" />
     <MESSAGE value="11.Using @DisplayName and @Disabled annotations" />
     <MESSAGE value="12.Lifecycle annotations @BeforeEach and @AfterEach" />
-    <option name="LAST_COMMIT_MESSAGE" value="12.Lifecycle annotations @BeforeEach and @AfterEach" />
+    <MESSAGE value="13.Lifecycle annotations @BeforeAll and @AfterAll" />
+    <option name="LAST_COMMIT_MESSAGE" value="13.Lifecycle annotations @BeforeAll and @AfterAll" />
   </component>
 </project>

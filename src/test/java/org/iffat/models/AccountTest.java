@@ -2,8 +2,10 @@ package org.iffat.models;
 
 import org.iffat.exceptions.InsufficientMoneyException;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.*;
 
 import java.math.BigDecimal;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -127,5 +129,76 @@ class AccountTest {
                         .findFirst().get().getPerson()),
                 () -> assertTrue(bank.getAccounts().stream()
                         .anyMatch(account -> account.getPerson().equals("Iffat"))));
+    }
+
+    @Test
+    @EnabledOnOs(OS.WINDOWS)
+    void testInsideWindows() {
+
+    }
+
+    @Test
+    @EnabledOnOs({OS.LINUX, OS.MAC})
+    void testInsideLinuxMac() {
+
+    }
+
+    @Test
+    @DisabledOnOs(OS.WINDOWS)
+    void testNoWindows() {
+
+    }
+
+    @Test
+    @EnabledOnJre(JRE.JAVA_8)
+    void testInsideJdk8() {
+
+    }
+
+    @Test
+    @EnabledOnJre(JRE.JAVA_17)
+    void testInsideJdk17() {
+
+    }
+
+    @Test
+    @DisabledOnJre(JRE.JAVA_17)
+    void testNoJdk17() {
+
+    }
+
+    @Test
+    void printSystemProperties() {
+        Properties properties = System.getProperties();
+        properties.forEach((key, value) -> System.out.println(key + ":" +value));
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "java.version", matches = ".*17.*")
+    void testJavaVersion() {
+
+    }
+
+    @Test
+    @DisabledIfSystemProperty(named = "os.arch", matches = ".*32.*")
+    void testInside64() {
+
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "os.arch", matches = ".*32.*")
+    void testNo64() {
+
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "user.name", matches = "iffat")
+    void testUsername() {
+    }
+
+    @Test
+    @EnabledIfSystemProperty(named = "ENV", matches = "dev")
+    void testDev() {
+
     }
 }
