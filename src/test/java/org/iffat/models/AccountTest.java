@@ -14,8 +14,9 @@ class AccountTest {
 //        account.setPerson("Iffat");
         String expected = "Iffat";
         String actual = account.getPerson();
-        assertEquals(expected, actual);
-        assertTrue(actual.equals("Iffat"));
+        assertNotNull(actual, "The account cannot be null");
+        assertEquals(expected, actual, "The account name is not what was expected: was expected " + expected + " however it was " + actual);
+        assertTrue(actual.equals("Iffat"), "expected account name must be equal to the actual");
     }
 
     @Test

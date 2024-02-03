@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="08.Proving and affirming the relationship between bank and account">
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="09.Using assertAll Method">
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +72,7 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.testRelationBankAccount">
+  <component name="RunManager" selected="JUnit.AccountTest.testAccountName">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
@@ -104,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testAccountReference" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testAccountName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -114,7 +114,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testAccountReference" />
+      <option name="METHOD_NAME" value="testAccountName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.testAccountName" />
         <item itemvalue="JUnit.AccountTest.testRelationBankAccount" />
         <item itemvalue="JUnit.AccountTest.testAccountTransferMoney" />
         <item itemvalue="JUnit.AccountTest.testAccountInsufficientMoneyException" />
         <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.testAccountReference" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706917227378</updated>
-      <workItem from="1706917228385" duration="8268000" />
+      <workItem from="1706917228385" duration="8709000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -236,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706926190204</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="09.Using assertAll Method">
+      <option name="closed" value="true" />
+      <created>1706926804922</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706926804922</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +259,7 @@
     <MESSAGE value="06. Testing and asserting with assertThrows in JUnit" />
     <MESSAGE value="07.Adding the bank class and the relationship with the accounts" />
     <MESSAGE value="08.Proving and affirming the relationship between bank and account" />
-    <option name="LAST_COMMIT_MESSAGE" value="08.Proving and affirming the relationship between bank and account" />
+    <MESSAGE value="09.Using assertAll Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="09.Using assertAll Method" />
   </component>
 </project>
