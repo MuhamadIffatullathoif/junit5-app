@@ -1,19 +1,30 @@
 package org.iffat.models;
 
 import org.iffat.exceptions.InsufficientMoneyException;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
+    Account account;
+
+    @BeforeEach
+    void setUp() {
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
+        System.out.println("Before each...");
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("After each");
+    }
+
     @Test
     @DisplayName("testing the name of the checking account")
     void testAccountName() {
-        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
 //        account.setPerson("Iffat");
         String expected = "Iffat";
         String actual = account.getPerson();
@@ -25,7 +36,7 @@ class AccountTest {
     @Test
     @DisplayName("testing the current account balance, which is not null, greater than zero, expected value.")
     void testAccountBalance() {
-        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
         assertEquals(1000.12345, account.getBalance().doubleValue());
         assertFalse(account.getBalance().compareTo(BigDecimal.ZERO) < 0);
         assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
@@ -34,7 +45,7 @@ class AccountTest {
     @Test
     @DisplayName("testing references that are equal with the equals method.")
     void testAccountReference() {
-        Account account = new Account("John doe", new BigDecimal("8000.9996"));
+        account = new Account("John doe", new BigDecimal("8000.9996"));
         Account account2 = new Account("John doe", new BigDecimal("8000.9996"));
 //        assertNotEquals(account2, account);
         assertEquals(account2, account);
@@ -42,7 +53,7 @@ class AccountTest {
 
     @Test
     void testAccountDebit() {
-        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
         account.debit(new BigDecimal(100));
         assertNotNull(account.getBalance());
         assertEquals(900, account.getBalance().intValue());
@@ -51,7 +62,7 @@ class AccountTest {
 
     @Test
     void testAccountCredit() {
-        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
         account.credit(new BigDecimal(100));
         assertNotNull(account.getBalance());
         assertEquals(1100, account.getBalance().intValue());
@@ -60,7 +71,7 @@ class AccountTest {
 
     @Test
     void testAccountInsufficientMoneyException() {
-        Account account = new Account("Iffat", new BigDecimal("1000.12345"));
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
         Exception exception = assertThrows(InsufficientMoneyException.class, () -> {
             account.debit(new BigDecimal(1500));
         });
