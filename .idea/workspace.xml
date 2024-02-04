@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="19.Writing parameterized test with @ParameterizedTest">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.csv" afterDir="false" />
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="19.1.Writing parameterized test with @ParameterizedTest">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -59,6 +59,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Coding/unit-test/junit5_app/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +71,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Coding\unit-test\junit5_app\src\main\resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -186,7 +190,7 @@
       <updated>1706917227378</updated>
       <workItem from="1706917228385" duration="10413000" />
       <workItem from="1706963172713" duration="3762000" />
-      <workItem from="1707002990591" duration="4951000" />
+      <workItem from="1707002990591" duration="5783000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -340,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707007236817</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="19.1.Writing parameterized test with @ParameterizedTest">
+      <option name="closed" value="true" />
+      <created>1707008002309</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707008002309</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +378,7 @@
     <MESSAGE value="17.Nested classes using @Nested" />
     <MESSAGE value="18.Repeating test with @RepeatedTest" />
     <MESSAGE value="19.Writing parameterized test with @ParameterizedTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="19.Writing parameterized test with @ParameterizedTest" />
+    <MESSAGE value="19.1.Writing parameterized test with @ParameterizedTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="19.1.Writing parameterized test with @ParameterizedTest" />
   </component>
 </project>

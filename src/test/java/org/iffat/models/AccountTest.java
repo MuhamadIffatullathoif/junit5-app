@@ -304,29 +304,58 @@ class AccountTest {
         assertEquals("900.12345", account.getBalance().toPlainString());
     }
 
-    @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
-    @ValueSource(strings = {"100","200","300","500","700","1000.12345"})
-    void testAccountDebitValueSource(String amount) {
-        account.debit(new BigDecimal(amount));
-        assertNotNull(account.getBalance());
-        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
-    }
+    @Nested
+    class testParameterizedTests {
+        @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
+        @ValueSource(strings = {"100","200","300","500","700","1000.12345"})
+        void testAccountDebitValueSource(String amount) {
+            account.debit(new BigDecimal(amount));
+            assertNotNull(account.getBalance());
+            assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+        }
 
-    @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
-    @CsvSource({"1,100","2,200","3,300","4,500","5,700","6,1000.12345"})
-    void testAccountDebitCSVSource(String index, String amount) {
-        System.out.println(index + " -> " + amount);
-        account.debit(new BigDecimal(amount));
-        assertNotNull(account.getBalance());
-        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
-    }
+        @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
+        @CsvSource({"1,100","2,200","3,300","4,500","5,700","6,1000.12345"})
+        void testAccountDebitCSVSource(String index, String amount) {
+            System.out.println(index + " -> " + amount);
+            account.debit(new BigDecimal(amount));
+            assertNotNull(account.getBalance());
+            assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+        }
 
-    @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
-    @CsvFileSource(resources = "/data.csv")
-    void testAccountDebitCSVFileSource(String amount) {
-        account.debit(new BigDecimal(amount));
-        assertNotNull(account.getBalance());
-        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+        @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
+        @CsvSource({"200,100,Moti,Joni","250,200,Pepe,Pepe","300,300,maria,Maria","510,500,Pepa,Pepa","750,700,Lucas,Luca","1000.12345,1000.12345,Reno,Reno"})
+        void testAccountDebitCSVSource2(String balance, String amount, String expected, String actual) {
+            System.out.println(balance + " -> " + amount);
+            account.setBalance(new BigDecimal(balance));
+            account.debit(new BigDecimal(amount));
+            account.setPerson(actual);
+            assertNotNull(account.getBalance());
+            assertEquals(expected, account.getPerson());
+            assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+        }
+
+        @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
+        @CsvFileSource(resources = "/data.csv")
+        void testAccountDebitCSVFileSource(String amount) {
+            account.debit(new BigDecimal(amount));
+            assertNotNull(account.getBalance());
+            assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+        }
+
+        @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
+        @CsvFileSource(resources = "/data2.csv")
+        void testAccountDebitCSVFileSource2(String balance, String amount, String expected, String actual) {
+            account.setBalance(new BigDecimal(balance));
+            account.debit(new BigDecimal(amount));
+            account.setPerson(actual);
+
+            assertNotNull(account.getBalance());
+            assertEquals(expected, account.getPerson());
+            assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+
+            assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
+        }
     }
 
     @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
