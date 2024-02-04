@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="20.Tagging tests with @Tag annotation">
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="21.Dependency injection &amp; test info and test reporter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -80,8 +80,8 @@
       <recent name="org.iffat.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Tags (account)">
-    <configuration name="AccountTest.printVariablesEnvironment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AccountTest$ExampleTimeout">
+    <configuration name="AccountTest$ExampleTimeout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -89,10 +89,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iffat.models" />
-      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="printVariablesEnvironment" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iffat.models.AccountTest" />
+      <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest$ExampleTimeout" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testProcessor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.testTimeout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit5_app" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +138,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iffat.models" />
       <option name="MAIN_CLASS_NAME" value="org.iffat.models.AccountTest" />
-      <option name="METHOD_NAME" value="testProcessor" />
+      <option name="METHOD_NAME" value="testTimeout" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,19 +163,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.AccountTest$ExampleTimeout" />
+      <item itemvalue="JUnit.AccountTest.testTimeout" />
       <item itemvalue="JUnit.AccountTest.testAccountBalanceDev2" />
       <item itemvalue="JUnit.AccountTest.testAccountBalanceDev" />
       <item itemvalue="JUnit.Tags (account)" />
-      <item itemvalue="JUnit.AccountTest.printVariablesEnvironment" />
-      <item itemvalue="JUnit.AccountTest.testProcessor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest$ExampleTimeout" />
+        <item itemvalue="JUnit.AccountTest.testTimeout" />
         <item itemvalue="JUnit.Tags (account)" />
         <item itemvalue="JUnit.AccountTest.testAccountBalanceDev2" />
         <item itemvalue="JUnit.AccountTest.testAccountBalanceDev" />
-        <item itemvalue="JUnit.AccountTest.testProcessor" />
-        <item itemvalue="JUnit.AccountTest.printVariablesEnvironment" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +189,7 @@
       <updated>1706917227378</updated>
       <workItem from="1706917228385" duration="10413000" />
       <workItem from="1706963172713" duration="3762000" />
-      <workItem from="1707002990591" duration="8043000" />
+      <workItem from="1707002990591" duration="8685000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -368,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707009588968</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="21.Dependency injection &amp; test info and test reporter">
+      <option name="closed" value="true" />
+      <created>1707011391762</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1707011391762</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +404,7 @@
     <MESSAGE value="19.1.Writing parameterized test with @ParameterizedTest" />
     <MESSAGE value="19.2.Writing parameterized test with @ParameterizedTest" />
     <MESSAGE value="20.Tagging tests with @Tag annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="20.Tagging tests with @Tag annotation" />
+    <MESSAGE value="21.Dependency injection &amp; test info and test reporter" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.Dependency injection &amp; test info and test reporter" />
   </component>
 </project>
