@@ -22,11 +22,16 @@ import static org.junit.jupiter.api.Assumptions.assumingThat;
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class AccountTest {
     Account account;
+    private TestInfo testInfo;
+    private TestReporter testReporter;
 
     @BeforeEach
-    void setUp() {
+    void setUp(TestInfo testInfo, TestReporter testReporter) {
         account = new Account("Iffat", new BigDecimal("1000.12345"));
+        this.testInfo = testInfo;
+        this.testReporter = testReporter;
         System.out.println("Before each...");
+        testReporter.publishEntry("Executing : " + testInfo.getDisplayName() + " " + testInfo.getTestMethod().orElse(null).getName() + " " + testInfo.getTags());
     }
 
     @AfterEach
@@ -51,6 +56,10 @@ class AccountTest {
         @Test
         @DisplayName("name")
         void testAccountName() {
+            testReporter.publishEntry(testInfo.getTags().toString());
+            if (testInfo.getTags().contains("account")) {
+                testReporter.publishEntry("Account Test Info TAGS");
+            }
             account = new Account("Iffat", new BigDecimal("1000.12345"));
 //        account.setPerson("Iffat");
             String expected = "Iffat";
@@ -131,7 +140,6 @@ class AccountTest {
         String expected = "Insufficient Money";
         assertEquals(expected, actual);
     }
-
 
 
     @Tag("account")
@@ -277,7 +285,6 @@ class AccountTest {
     }
 
 
-
     @Test
     @DisplayName("test Account Balance Dev")
     void testAccountBalanceDev() {
@@ -318,7 +325,7 @@ class AccountTest {
     @Nested
     class testParameterizedTests {
         @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
-        @ValueSource(strings = {"100","200","300","500","700","1000.12345"})
+        @ValueSource(strings = {"100", "200", "300", "500", "700", "1000.12345"})
         void testAccountDebitValueSource(String amount) {
             account.debit(new BigDecimal(amount));
             assertNotNull(account.getBalance());
@@ -326,7 +333,7 @@ class AccountTest {
         }
 
         @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
-        @CsvSource({"1,100","2,200","3,300","4,500","5,700","6,1000.12345"})
+        @CsvSource({"1,100", "2,200", "3,300", "4,500", "5,700", "6,1000.12345"})
         void testAccountDebitCSVSource(String index, String amount) {
             System.out.println(index + " -> " + amount);
             account.debit(new BigDecimal(amount));
@@ -335,7 +342,7 @@ class AccountTest {
         }
 
         @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
-        @CsvSource({"200,100,Moti,Joni","250,200,Pepe,Pepe","300,300,maria,Maria","510,500,Pepa,Pepa","750,700,Lucas,Luca","1000.12345,1000.12345,Reno,Reno"})
+        @CsvSource({"200,100,Moti,Joni", "250,200,Pepe,Pepe", "300,300,maria,Maria", "510,500,Pepa,Pepa", "750,700,Lucas,Luca", "1000.12345,1000.12345,Reno,Reno"})
         void testAccountDebitCSVSource2(String balance, String amount, String expected, String actual) {
             System.out.println(balance + " -> " + amount);
             account.setBalance(new BigDecimal(balance));
@@ -379,6 +386,6 @@ class AccountTest {
     }
 
     static List<String> amountList() {
-        return Arrays.asList("100","200","300","500","700","1000.12345");
+        return Arrays.asList("100", "200", "300", "500", "700", "1000.12345");
     }
 }
