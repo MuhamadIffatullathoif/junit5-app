@@ -3,6 +3,8 @@ package org.iffat.models;
 import org.iffat.exceptions.InsufficientMoneyException;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.math.BigDecimal;
 import java.util.Map;
@@ -295,5 +297,13 @@ class AccountTest {
         assertNotNull(account.getBalance());
         assertEquals(900, account.getBalance().intValue());
         assertEquals("900.12345", account.getBalance().toPlainString());
+    }
+
+    @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
+    @ValueSource(strings = {"100","200","300","500","700","1000.12345"})
+    void testAccountDebitRepeat(String amount) {
+        account.debit(new BigDecimal(amount));
+        assertNotNull(account.getBalance());
+        assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
     }
 }
