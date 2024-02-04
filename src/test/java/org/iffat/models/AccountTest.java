@@ -283,4 +283,17 @@ class AccountTest {
         assertFalse(account.getBalance().compareTo(BigDecimal.ZERO) < 0);
         assertTrue(account.getBalance().compareTo(BigDecimal.ZERO) > 0);
     }
+
+    @DisplayName("test Account Debit Repeat")
+    @RepeatedTest(value = 5, name = "{displayName} - Repeat number {currentRepetition} of {totalRepetitions}")
+    void testAccountDebitRepeat(RepetitionInfo info) {
+        if (info.getCurrentRepetition() == 3) {
+            System.out.println("Repetition of " + info.getCurrentRepetition());
+        }
+        account = new Account("Iffat", new BigDecimal("1000.12345"));
+        account.debit(new BigDecimal(100));
+        assertNotNull(account.getBalance());
+        assertEquals(900, account.getBalance().intValue());
+        assertEquals("900.12345", account.getBalance().toPlainString());
+    }
 }

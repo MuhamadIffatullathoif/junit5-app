@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="16.Execution conditional test with assumptions programmatically">
+    <list default="true" id="6a0515b5-d539-4b39-852a-b565a785c9b4" name="Changes" comment="17.Nested classes using @Nested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iffat/models/AccountTest.java" afterDir="false" />
     </list>
@@ -182,7 +182,7 @@
       <updated>1706917227378</updated>
       <workItem from="1706917228385" duration="10413000" />
       <workItem from="1706963172713" duration="3762000" />
-      <workItem from="1707002990591" duration="2117000" />
+      <workItem from="1707002990591" duration="3239000" />
     </task>
     <task id="LOCAL-00001" summary="01. Create and configure project with JUnit 5">
       <option name="closed" value="true" />
@@ -312,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707004481323</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="17.Nested classes using @Nested">
+      <option name="closed" value="true" />
+      <created>1707005413606</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707005413606</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +343,7 @@
     <MESSAGE value="14.Conditional tests @EnabledOnOS, @EnableOnJre @EnabledIfSystemProperty etc" />
     <MESSAGE value="15.Conditional tests executions with @enabledIfEnvironmentVariable" />
     <MESSAGE value="16.Execution conditional test with assumptions programmatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="16.Execution conditional test with assumptions programmatically" />
+    <MESSAGE value="17.Nested classes using @Nested" />
+    <option name="LAST_COMMIT_MESSAGE" value="17.Nested classes using @Nested" />
   </component>
 </project>
