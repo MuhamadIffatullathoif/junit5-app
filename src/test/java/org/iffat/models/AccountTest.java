@@ -44,6 +44,7 @@ class AccountTest {
         System.out.println("After All");
     }
 
+    @Tag("account")
     @Nested
     @DisplayName("Testing checking account attributes")
     class AccountBalanceTest {
@@ -80,6 +81,8 @@ class AccountTest {
 
     @Nested
     class AccountOperationTest {
+
+        @Tag("account")
         @Test
         void testAccountDebit() {
             account = new Account("Iffat", new BigDecimal("1000.12345"));
@@ -89,6 +92,7 @@ class AccountTest {
             assertEquals("900.12345", account.getBalance().toPlainString());
         }
 
+        @Tag("account")
         @Test
         void testAccountCredit() {
             account = new Account("Iffat", new BigDecimal("1000.12345"));
@@ -98,6 +102,8 @@ class AccountTest {
             assertEquals("1100.12345", account.getBalance().toPlainString());
         }
 
+        @Tag("account")
+        @Tag("bank")
         @Test
         void testAccountTransferMoney() {
             Account account1 = new Account("Iffat", new BigDecimal("2500"));
@@ -113,6 +119,8 @@ class AccountTest {
     }
 
 
+    @Tag("account")
+    @Tag("error")
     @Test
     void testAccountInsufficientMoneyException() {
         account = new Account("Iffat", new BigDecimal("1000.12345"));
@@ -126,11 +134,13 @@ class AccountTest {
 
 
 
+    @Tag("account")
+    @Tag("bank")
     @Test
-    @Disabled
+//    @Disabled
     @DisplayName("Testing relationship bank and account with assertAll")
     void testRelationBankAccount() {
-        fail();
+//        fail();
         Account account1 = new Account("Iffat", new BigDecimal("2500"));
         Account account2 = new Account("John Doe", new BigDecimal("1500.12345"));
 
@@ -304,6 +314,7 @@ class AccountTest {
         assertEquals("900.12345", account.getBalance().toPlainString());
     }
 
+    @Tag("param")
     @Nested
     class testParameterizedTests {
         @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
@@ -358,6 +369,7 @@ class AccountTest {
         }
     }
 
+    @Tag("param")
     @ParameterizedTest(name = "number {index} executing with courage {0} - {argumentsWithNames}")
     @MethodSource("amountList")
     void testAccountDebitMethodSource(String amount) {
